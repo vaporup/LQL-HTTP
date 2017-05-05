@@ -35,9 +35,10 @@ If needed, change host and port in **lql.wsgi**
 
 #### Default
 
+```
 LIVESTATUS_HOST = '127.0.0.1'
-
 LIVESTATUS_PORT = 6557
+```
 
 ## Usage
 
