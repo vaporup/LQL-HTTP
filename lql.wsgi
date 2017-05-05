@@ -23,7 +23,10 @@ def get_data(query):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((LIVESTATUS_HOST, LIVESTATUS_PORT))
 
-    print "Sending query..."
+    print "Sending query to Livestatus socket..."
+    print
+    print query
+
     s.send(query)
 
     answer = recvall(s)
@@ -34,6 +37,9 @@ def get_data(query):
 def bridge_lql():
 
     postdata = request.body.readlines()
+
+    print "Receiving query from client..."
+    print
     print postdata #this goes to log file only, not to client
 
     output_format = 'json'
