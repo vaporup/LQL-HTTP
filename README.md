@@ -3,8 +3,8 @@ Use [Check_MK livestatus LQL](https://mathias-kettner.de/checkmk_livestatus.html
 
 ## Requirements
 
-- [https://bottlepy.org](Bottle)
-- [https://wsgi.readthedocs.io](WSGI)
+- [Bottle](https://bottlepy.org)
+- [WSGI](https://wsgi.readthedocs.io)
 
 ## Installation
 
