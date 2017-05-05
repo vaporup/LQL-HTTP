@@ -7,3 +7,11 @@ Use [Check_MK livestatus LQL](https://mathias-kettner.de/checkmk_livestatus.html
 
 ```
 apt-get install libapache2-mod-wsgi python-bottle
+
+## Apache2 Config
+
+```
+        WSGIScriptAlias   /lql /var/www/html/lql.wsgi
+        WSGIDaemonProcess lql processes=2 threads=10
+        WSGIProcessGroup  lql
+
