@@ -10,6 +10,7 @@ apt-get install libapache2-mod-wsgi python-bottle
 ```
 
 ## Apache2 Config
+Add the following lines to your VirtualHost
 
 ```
 <VirtualHost *:80>
