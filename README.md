@@ -18,7 +18,9 @@ Inspired by [Livestatus-Rest-Interface
 apt-get install libapache2-mod-wsgi python-bottle
 ```
 
-### Apache2 Config
+## Config
+
+### Apache2
 Add the following lines to your VirtualHost section
 
 ```
@@ -26,6 +28,15 @@ WSGIScriptAlias   /lql /var/www/html/lql.wsgi
 WSGIDaemonProcess lql processes=2 threads=10
 WSGIProcessGroup  lql
 ```
+
+### Livestatus Host and Port
+
+If needed, change host and port in **lql.wsgi**
+
+#### Default
+
+LIVESTATUS_HOST = '127.0.0.1'
+LIVESTATUS_PORT = 6557
 
 ## Usage
 
