@@ -1,4 +1,4 @@
-# LQL-over-HTTP
+# LQL-over-HTTP(s)
 Use [Check_MK livestatus LQL](https://mathias-kettner.de/checkmk_livestatus.html) over HTTP(s).
 
 Inspired by [Livestatus-Rest-Interface
