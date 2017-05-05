@@ -25,7 +25,7 @@ def get_data(query):
 
     print "Sending query to Livestatus socket..."
     print
-    print query
+    print query # this goes to Apache log file only, not to client
 
     s.send(query)
 
@@ -36,11 +36,12 @@ def get_data(query):
 @route('/', method='POST')
 def bridge_lql():
 
-    postdata = request.body.readlines()
-
     print "Receiving query from client..."
     print
-    print postdata #this goes to log file only, not to client
+
+    postdata = request.body.readlines()
+
+    print postdata # this goes to Apache log file only, not to client
 
     output_format = 'json'
 
