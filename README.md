@@ -22,13 +22,9 @@ apt-get install libapache2-mod-wsgi python-bottle
 Add the following lines to your VirtualHost
 
 ```
-<VirtualHost *:80>
-
         WSGIScriptAlias   /lql /var/www/html/lql.wsgi
         WSGIDaemonProcess lql processes=2 threads=10
         WSGIProcessGroup  lql
-
-</VirtualHost>
 ```
 
 ## Usage
