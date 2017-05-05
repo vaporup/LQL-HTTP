@@ -19,7 +19,7 @@ apt-get install libapache2-mod-wsgi python-bottle
 ```
 
 ### Apache2 Config
-Add the following lines to your VirtualHost
+Add the following lines to your VirtualHost section
 
 ```
         WSGIScriptAlias   /lql /var/www/html/lql.wsgi
