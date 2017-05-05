@@ -21,3 +21,19 @@ Add the following lines to your VirtualHost
 
 </VirtualHost>
 ```
+
+# Usage
+
+## query.lql
+
+```
+GET hosts
+Columns: name
+Limit: 2
+```
+
+```
+
+curl -X POST --data-binary @query.lql http://127.0.0.1/lql/
+
+```
