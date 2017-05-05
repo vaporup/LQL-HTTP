@@ -31,7 +31,7 @@ WSGIProcessGroup  lql
 
 ### Livestatus Host and Port
 
-If needed, change host and port in **lql.wsgi**
+If needed, change Livestatus host and port in **lql.wsgi**
 
 #### Default
 
