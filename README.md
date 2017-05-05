@@ -1,15 +1,15 @@
-# LQL-HTTP
+# LQL-over-HTTP
 Use [Check_MK livestatus LQL](https://mathias-kettner.de/checkmk_livestatus.html) over HTTP 
 
-# Installation
+## Installation
 
-## WSGI and Bottle
+### WSGI and Bottle
 
 ```
 apt-get install libapache2-mod-wsgi python-bottle
 ```
 
-## Apache2 Config
+### Apache2 Config
 Add the following lines to your VirtualHost
 
 ```
@@ -22,9 +22,9 @@ Add the following lines to your VirtualHost
 </VirtualHost>
 ```
 
-# Usage
+## Usage
 
-## query.lql
+### query.lql
 
 ```
 GET hosts
@@ -32,8 +32,9 @@ Columns: name
 Limit: 2
 ```
 
-```
+### post query
 
+```
 curl -X POST --data-binary @query.lql http://127.0.0.1/lql/
 
 ```
