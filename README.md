@@ -1,5 +1,6 @@
 # LQL-over-HTTP
-Use [Check_MK livestatus LQL](https://mathias-kettner.de/checkmk_livestatus.html) over HTTP .
+Use [Check_MK livestatus LQL](https://mathias-kettner.de/checkmk_livestatus.html) over HTTP.
+
 Inspired by [Livestatus-Rest-Interface
 ](https://github.com/py-man/Livestatus-Rest-Interface) and [rest-mk-livestatus
 ](https://github.com/giuliano108/rest-mk-livestatus)
