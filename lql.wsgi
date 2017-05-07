@@ -43,26 +43,24 @@ def bridge_lql():
 
     print postdata # this goes to Apache log file only, not to client
 
-    output_format = 'json'
+    found_output_format = False
 
     _query = []
 
     for line in postdata:
 
-        if 'outputformat' in line.lower() and 'csv' in line.lower():
-            output_format = 'csv'
-            continue
-        if 'outputformat' in line.lower() and 'python' in line.lower():
-            output_format = 'python'
-            continue
-        if 'outputformat' in line.lower() and 'json' in line.lower():
-            continue
-        if 'outputformat' in line.lower():
+        if not 'outputformat' in line.lower():
+            _query.append(line.replace('\n', ' ').replace('\r', ''))
             continue
 
-        _query.append(line.replace('\n', ' ').replace('\r', ''))
+        if 'outputformat' in line.lower() and not found_output_format:
+            _query.append(line.replace('\n', ' ').replace('\r', ''))
+            found_output_format = True
+            continue
 
-    _query.append('OutputFormat: ' + output_format)
+    if not found_output_format:
+        _query.append('OutputFormat: json')
+
     _query.append('')
     _query.append('')
 
