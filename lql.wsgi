@@ -60,13 +60,15 @@ def bridge_lql():
 
     if not found_output_format:
         _query.append('OutputFormat: json')
+        response.headers['Content-Type'] = 'application/json'
+    else:
+        response.headers['Content-Type'] = 'text/plain'
 
     _query.append('')
     _query.append('')
 
     query = "\n".join(_query)
 
-    response.headers['Content-Type'] = 'application/json'
 
     answer = get_data(query)
 
